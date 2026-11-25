@@ -1,0 +1,65 @@
+:root {
+  --bg: #f6f6f4;
+  --paper: #ffffff;
+  --ink: #1d1f22;
+  --muted: #5f6368;
+  --line: #e2e2de;
+  --accent: #3b4048;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141517;
+    --paper: #1c1d20;
+    --ink: #e8e8e6;
+    --muted: #a0a3a8;
+    --line: #2e3034;
+    --accent: #c9ccd1;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+header.site { margin-bottom: 28px; }
+header.site a.brand {
+  color: var(--muted); text-decoration: none; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+nav.tabs { margin-top: 10px; display: flex; gap: 16px; font-size: 15px; }
+nav.tabs a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 2px solid transparent; }
+nav.tabs a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+main {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 40px 36px;
+}
+h1 { font-size: 26px; line-height: 1.35; margin: 0 0 6px; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+h2 { font-size: 18px; margin: 34px 0 8px; }
+p, li { margin: 6px 0; }
+ol, ul { padding-left: 22px; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0 6px; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: color-mix(in srgb, var(--line) 45%, transparent); font-weight: 600; }
+.table-scroll { overflow-x: auto; }
+a { color: var(--accent); }
+footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 28px; }
+.cards { display: grid; gap: 12px; margin-top: 20px; }
+.cards a {
+  display: block; padding: 18px 20px; border: 1px solid var(--line); border-radius: 8px;
+  text-decoration: none; color: var(--ink);
+}
+.cards a span { display: block; color: var(--muted); font-size: 14px; }
+@media (max-width: 560px) {
+  .wrap { padding-top: 28px; }
+  main { padding: 26px 18px; }
+  h1 { font-size: 22px; }
+}
